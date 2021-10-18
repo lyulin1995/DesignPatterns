@@ -17,6 +17,11 @@ public class Main {
         // As long as we keep the signature of calculateTax() method exactly as these,
         // we are not going to have a breaking change.
 
+        var account = new Account();
+        account.deposit(10);
+        account.withdraw(5);
+        System.out.println(account.getBalance());
+
     }
     public static TaxCalculator getCalculator() {
         return new TaxCalculator2019();
