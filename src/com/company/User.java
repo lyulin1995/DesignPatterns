@@ -9,8 +9,13 @@ public class User {
         this.name = name;
         // if we type name = name, the java compiler will think we are referring to this name parameter.
         // Using this. to access all the fields and methods in this class.
-        
+
     }
     // Methods
+    public void sayHello() {
+        System.out.println("Hi, my name is " + name);
+        // Here, we don't have parameters. So we don't have to use this.
+
+    }
 
 }
