@@ -26,6 +26,9 @@ public class Main {
         mailService.sendEmail();
         // customers don't care about the connect/disconnect/auth methods.
 
+        var textBox = new TextBox();
+        textBox.enable();
+
     }
     public static TaxCalculator getCalculator() {
         return new TaxCalculator2019();
