@@ -29,9 +29,18 @@ public class Main {
         var textBox = new TextBox();
         textBox.enable();
 
+        drawUIControl(new TextBox());
+        drawUIControl(new CheckBox());
+
     }
+
     public static TaxCalculator getCalculator() {
         return new TaxCalculator2019();
+    }
 
+    public static void drawUIControl(UIControl control) {
+        control.draw();
+        // UIControl is the parent of the TextBox and CheckBox classes.
+        // The object control can take on different forms.
     }
 }
