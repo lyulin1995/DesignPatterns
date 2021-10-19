@@ -22,6 +22,10 @@ public class Main {
         account.withdraw(5);
         System.out.println(account.getBalance());
 
+        var mailService = new MailService();
+        mailService.sendEmail();
+        // customers don't care about the connect/disconnect/auth methods.
+
     }
     public static TaxCalculator getCalculator() {
         return new TaxCalculator2019();
