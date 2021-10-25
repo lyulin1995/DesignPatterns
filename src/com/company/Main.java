@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.iterator.BrowseHistory;
+import com.company.iterator.Iterator;
 import com.company.memento.Editor;
 import com.company.memento.History;
 import com.company.state.BrushTool;
@@ -64,6 +66,20 @@ public class Main {
         canvas.setCurrentTool(new EraserTool());
         canvas.mouseDown();
         canvas.mouseUp();
+
+        // iterator
+        var history_i = new BrowseHistory();
+        history_i.push("a");
+        history_i.push("b");
+        history_i.push("c");
+
+        Iterator iterator = history_i.createIterator();
+        while (iterator.hasNext()) {
+            var url = iterator.current();
+            System.out.println(url);
+            iterator.next();
+        }
+
     }
 
     public static TaxCalculator getCalculator() {
