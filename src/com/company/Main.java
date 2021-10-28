@@ -9,6 +9,7 @@ import com.company.state.Canvas;
 import com.company.state.EraserTool;
 import com.company.state.SelectionTool;
 import com.company.strategy.*;
+import com.company.template.TransferMoneyTask;
 
 public class Main {
 
@@ -86,6 +87,9 @@ public class Main {
         imageStorage.store("a", new JpegCompressor(), new BlackAndWhiteFilter());
         imageStorage.store("a", new PngCompressor(), new HighContrastFilter());
 
+        // Template:
+        var task = new TransferMoneyTask();
+        task.execute();
     }
 
     public static TaxCalculator getCalculator() {
