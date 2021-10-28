@@ -7,6 +7,7 @@ public class BrowseHistory {
 
     private List<String> urls = new ArrayList<>();
     // you can replace this list with a fixed size array.
+//    private String[] urls = new String[10];
 
     public void push (String url) {
         urls.add(url);

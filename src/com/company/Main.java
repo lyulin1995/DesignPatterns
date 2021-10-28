@@ -8,6 +8,7 @@ import com.company.state.BrushTool;
 import com.company.state.Canvas;
 import com.company.state.EraserTool;
 import com.company.state.SelectionTool;
+import com.company.strategy.*;
 
 public class Main {
 
@@ -79,6 +80,11 @@ public class Main {
             System.out.println(url);
             iterator.next();
         }
+
+        // Strategy:
+        var imageStorage = new ImageStorage();
+        imageStorage.store("a", new JpegCompressor(), new BlackAndWhiteFilter());
+        imageStorage.store("a", new PngCompressor(), new HighContrastFilter());
 
     }
 
